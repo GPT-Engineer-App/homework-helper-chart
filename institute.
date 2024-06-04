@@ -1,0 +1,65 @@
+graph TD
+    A[User Authentication] -->|Secure login and profile management| B{User Roles}
+    B -->|Student| C[Student Dashboard]
+    B -->|Teacher| D[Teacher Dashboard]
+
+    C --> E[View Homework Assignments]
+    C --> F[Submit Homework]
+    C --> G[View Hints and Correct Answers]
+    C --> H[Mandatory Video Content for Low Scorers]
+
+    D --> I[Assign Homework]
+    D --> J[Review Homework]
+    D --> K[Upload Instructional Materials and Videos]
+    D --> L[Monitor Student Progress]
+
+    E --> M[Receive Notifications]
+    E --> N[Access Homework During Availability Window]
+
+    F --> O[Scan and Upload Answers via PDFs]
+    F --> P[Request Time Extension for Uploading]
+
+    G --> Q[Hints Section Linked to Notes]
+    G --> R[Correct Answers Revealed Post-Deadline]
+
+    H --> S[Video Tutorials with Disabled Skip Functionality]
+
+    I --> T[Set Deadlines]
+    I --> U[Visible to Relevant Batches and Courses]
+
+    J --> V[Track Submission Rates]
+    J --> W[Grade Homework]
+    J --> X[Monitor Individual Student Progress]
+
+    L --> Y[Track Submission Rates]
+    L --> Z[Monitor Grades]
+    L --> AA[Monitor Individual Student Progress]
+
+    subgraph Performance Tracking and Analytics
+        V
+        W
+        X
+        Y
+        Z
+        AA
+    end
+
+    subgraph Data Management
+        AB[Manage Dataset of 1500 Students]
+        AC[Ensure High Performance and Data Integrity]
+    end
+
+    subgraph Technology Stack
+        AD[Frontend: Flutter]
+        AE[Backend: Node.js/Express]
+        AF[Database: MongoDB/SQL]
+        AG[Third-Party APIs for Push Notifications and Cloud Storage]
+    end
+
+    subgraph Anti-Cheating Measures
+        AH[Full Window Mode]
+        AI[Restrict Minimize and Back Actions]
+    end
+
+    C --> AH
+    AH --> AI
